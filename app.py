@@ -40,7 +40,7 @@ difficulty_level = st.radio(
     index=0,
 )
 
-num_questions = st.slider("How many questions?", 1, 10, 5)
+num_questions = st.slider("How many questions?", 1, 9, 5)
 
 questions = generate_question(difficulty_level, num_questions)
 for question in questions:
