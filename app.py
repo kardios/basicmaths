@@ -37,7 +37,13 @@ def generate_question(difficulty):
     return questions
 
 # Example usage:
-difficulty_level = 'medium'  # 'easy', 'medium', or 'hard'
+difficulty_level = st.radio(
+    "What's your difficulty level?",
+    ["easy", "medium", "hard"],
+    index=None,
+)
+
+difficulty_level = 'medium'
 questions = generate_question(difficulty_level)
 for question in questions:
     st.header(question)
