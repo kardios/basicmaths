@@ -43,7 +43,6 @@ difficulty_level = st.radio(
     index=None,
 )
 
-difficulty_level = 'medium'
 questions = generate_question(difficulty_level)
 for question in questions:
     st.header(question)
