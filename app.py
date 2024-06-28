@@ -40,4 +40,4 @@ def generate_question(difficulty):
 difficulty_level = 'medium'  # 'easy', 'medium', or 'hard'
 questions = generate_question(difficulty_level)
 for question in questions:
-    print(question)
+    st.write(question)
