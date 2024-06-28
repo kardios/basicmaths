@@ -37,7 +37,7 @@ def generate_question(difficulty, num_questions):
 difficulty_level = st.radio(
     "What's your difficulty level?",
     ["easy", "medium", "hard"],
-    index=None,
+    index=0,
 )
 
 num_questions = st.slider("How many questions?", 1, 10, 5)
