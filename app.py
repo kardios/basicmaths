@@ -1,16 +1,13 @@
 import streamlit as st
 import random
 
-def generate_question(difficulty):
+def generate_question(difficulty, num_questions):
     if difficulty == 'easy':
         range_min, range_max = 1, 20
-        num_questions = 5
     elif difficulty == 'medium':
         range_min, range_max = 1, 50
-        num_questions = 7
     elif difficulty == 'hard':
         range_min, range_max = 1, 100
-        num_questions = 10
     else:
         raise ValueError("Invalid difficulty level")
 
@@ -43,6 +40,8 @@ difficulty_level = st.radio(
     index=None,
 )
 
-questions = generate_question(difficulty_level)
+num_questions = st.slider("How many questions?", 1, 10, 5)
+
+questions = generate_question(difficulty_level, num_questions)
 for question in questions:
-    st.header(question)
+    st.header(question, "=")
