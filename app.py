@@ -44,4 +44,5 @@ num_questions = st.slider("How many questions?", 1, 10, 5)
 
 questions = generate_question(difficulty_level, num_questions)
 for question in questions:
-    st.header(question, "=")
+    st.header(question + " =")
+ 
